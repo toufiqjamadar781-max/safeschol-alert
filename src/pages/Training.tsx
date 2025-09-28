@@ -17,98 +17,138 @@ const Training = () => {
       videos: [
         {
           id: "1",
-          title: "School Fire Drill Procedure",
+          title: "School Fire Drill #13 - Real School Evacuation",
           duration: "5:23",
           views: "3.2M",
           rating: 4.9,
-          thumbnail: "https://img.youtube.com/vi/dYBNAr_9m8E/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/dYBNAr_9m8E",
-          description: "Complete fire evacuation procedure for schools including alarm recognition and evacuation routes."
+          thumbnail: "https://img.youtube.com/vi/O1uEpFw0pFk/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/O1uEpFw0pFk",
+          description: "Real high school fire drill showing proper evacuation procedures, alarm systems, and student response protocols."
         },
         {
           id: "2",
-          title: "Fire Extinguisher Training",
-          duration: "7:45",
-          views: "1.8M",
+          title: "Fire Drills at School - Firefighter Training",
+          duration: "4:45",
+          views: "112K",
           rating: 4.8,
-          thumbnail: "https://img.youtube.com/vi/7CApUCCJhj8/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/7CApUCCJhj8",
-          description: "Professional firefighter demonstrates proper use of fire extinguishers in school environments."
-        }
-      ]
-    },
-    {
-      title: "🌍 Earthquake Safety",
-      videos: [
-        {
-          id: "3",
-          title: "Drop, Cover, and Hold On",
-          duration: "4:12",
-          views: "2.1M",
-          rating: 4.9,
-          thumbnail: "https://img.youtube.com/vi/B0Z7gN2rJkE/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/B0Z7gN2rJkE",
-          description: "Official earthquake safety procedure demonstration for students and teachers."
+          thumbnail: "https://img.youtube.com/vi/UbBT7ZLg2Bk/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/UbBT7ZLg2Bk",
+          description: "Professional firefighter demonstrates proper fire drill procedures specifically for school environments."
         },
         {
-          id: "4",
-          title: "Tokyo School Earthquake Drill",
-          duration: "6:38",
-          views: "4.1M",
+          id: "3",
+          title: "Fire Mock Drill Training - Complete Procedure",
+          duration: "8:30",
+          views: "45K",
           rating: 4.7,
-          thumbnail: "https://img.youtube.com/vi/BLEPtibtKu0/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/BLEPtibtKu0",
-          description: "Real classroom footage of earthquake drill procedures in Japanese schools."
+          thumbnail: "https://img.youtube.com/vi/atwOKIaBX84/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/atwOKIaBX84",
+          description: "Comprehensive fire evacuation drill training video showing complete emergency response procedures."
         }
       ]
     },
     {
-      title: "🏥 First Aid & Medical Emergencies",
+      title: "🌍 Earthquake Safety Drills",
       videos: [
         {
+          id: "4",
+          title: "Drop, Cover, and Hold On - Official Training",
+          duration: "4:12",
+          views: "150K",
+          rating: 4.9,
+          thumbnail: "https://img.youtube.com/vi/aV89_yUJunM/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/aV89_yUJunM",
+          description: "Official earthquake safety demonstration showing proper Drop, Cover, and Hold On procedures for classrooms."
+        },
+        {
           id: "5",
-          title: "CPR Training for Schools",
-          duration: "12:15",
-          views: "856K",
+          title: "Earthquake Safety for Kids - School Training",
+          duration: "3:45",
+          views: "89K",
           rating: 4.8,
-          thumbnail: "https://img.youtube.com/vi/6HrHKgz8949/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/6HrHKgz8949",
-          description: "Comprehensive CPR training specifically designed for school staff and older students."
+          thumbnail: "https://img.youtube.com/vi/YWTsoSU1BMg/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/YWTsoSU1BMg",
+          description: "Educational video teaching children the three essential steps for earthquake safety in school settings."
         },
         {
           id: "6",
-          title: "School Emergency First Aid",
-          duration: "8:30",
-          views: "650K",
+          title: "Drop, Cover, Hold On - Real Classroom Demo",
+          duration: "6:15",
+          views: "21K",
           rating: 4.6,
-          thumbnail: "https://img.youtube.com/vi/C_b_132gOjc/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/C_b_132gOjc",
-          description: "Essential first aid skills every teacher should know for common school emergencies."
+          thumbnail: "https://img.youtube.com/vi/wnACXbcdkDA/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/wnACXbcdkDA",
+          description: "Real classroom demonstration of earthquake response procedures with students and teachers."
         }
       ]
     },
     {
-      title: "⚠️ Emergency Procedures",
+      title: "🏥 First Aid & CPR Training",
       videos: [
         {
           id: "7",
-          title: "School Lockdown Procedures",
-          duration: "9:45",
-          views: "1.2M",
-          rating: 4.7,
-          thumbnail: "https://img.youtube.com/vi/4NHJ2YIAB_4/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/4NHJ2YIAB_4",
-          description: "Professional training on lockdown procedures and classroom security measures."
+          title: "CPR in Schools Training Kit Demo",
+          duration: "12:15",
+          views: "1.6K",
+          rating: 4.8,
+          thumbnail: "https://img.youtube.com/vi/-DK99mmo4NM/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/-DK99mmo4NM",
+          description: "Professional demonstration of CPR training specifically designed for school environments and staff."
         },
         {
           id: "8",
-          title: "Emergency Communication Systems",
-          duration: "11:20",
-          views: "890K",
+          title: "Red Cross CPR Basics for Schools",
+          duration: "8:30",
+          views: "34K",
+          rating: 4.7,
+          thumbnail: "https://img.youtube.com/vi/_zJQUUj2Oo8/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/_zJQUUj2Oo8",
+          description: "American Red Cross CPR training basics designed for school staff and older students."
+        },
+        {
+          id: "9",
+          title: "How to Perform CPR - Step by Step Guide",
+          duration: "10:45",
+          views: "2.1M",
+          rating: 4.9,
+          thumbnail: "https://img.youtube.com/vi/Plse2FOkV4Q/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/Plse2FOkV4Q",
+          description: "Detailed step-by-step CPR demonstration for emergency situations in educational settings."
+        }
+      ]
+    },
+    {
+      title: "🔒 Lockdown & Security Procedures",
+      videos: [
+        {
+          id: "10",
+          title: "Inside Look: School Lockdown Drills",
+          duration: "9:45",
+          views: "125K",
+          rating: 4.7,
+          thumbnail: "https://img.youtube.com/vi/DH_qQ4MtxTY/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/DH_qQ4MtxTY",
+          description: "School resource officers demonstrate proper lockdown procedures and safety protocols."
+        },
+        {
+          id: "11",
+          title: "Real World Lockdown Drill Training",
+          duration: "7:20",
+          views: "3.7K",
           rating: 4.5,
-          thumbnail: "https://img.youtube.com/vi/rOqGAP6_bME/maxresdefault.jpg",
-          embedUrl: "https://www.youtube.com/embed/rOqGAP6_bME",
-          description: "How schools use emergency communication systems during crisis situations."
+          thumbnail: "https://img.youtube.com/vi/kPvNYkNSNt0/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/kPvNYkNSNt0",
+          description: "Real lockdown drill showing classroom security measures and student response procedures."
+        },
+        {
+          id: "12",
+          title: "School Emergency Safety Procedures",
+          duration: "11:20",
+          views: "18K",
+          rating: 4.6,
+          thumbnail: "https://img.youtube.com/vi/Qu2KjEb79rs/maxresdefault.jpg",
+          embedUrl: "https://www.youtube.com/embed/Qu2KjEb79rs",
+          description: "Comprehensive guide to handling various school emergency situations including lockdowns and evacuations."
         }
       ]
     }

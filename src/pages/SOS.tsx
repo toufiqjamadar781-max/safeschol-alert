@@ -51,8 +51,14 @@ const SOS = () => {
       });
     }, 1000);
 
+    // Play emergency sound if available
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance("Emergency SOS activated. Alert will be sent in 10 seconds.");
+      speechSynthesis.speak(utterance);
+    }
+
     toast({
-      title: "SOS Activated!",
+      title: "🚨 SOS ACTIVATED!",
       description: "Emergency alert will be sent in 10 seconds. Tap 'Cancel' to stop.",
       variant: "destructive",
     });
@@ -61,6 +67,11 @@ const SOS = () => {
   const cancelSOS = () => {
     setSosActive(false);
     setCountdown(0);
+    
+    if ('speechSynthesis' in window) {
+      speechSynthesis.cancel();
+    }
+    
     toast({
       title: "SOS Cancelled",
       description: "Emergency alert has been cancelled.",
@@ -69,30 +80,104 @@ const SOS = () => {
 
   const sendSOSAlert = () => {
     setSosActive(false);
+    
+    // Simulate real emergency alert system
+    const alertData = {
+      timestamp: new Date().toISOString(),
+      location: userLocation,
+      type: "General Emergency",
+      userId: "user_123",
+      deviceInfo: navigator.userAgent
+    };
+
+    // In a real app, this would send to emergency services
+    console.log("EMERGENCY ALERT SENT:", alertData);
+    
+    // Send to multiple emergency contacts simultaneously
+    emergencyContacts.forEach(contact => {
+      console.log(`Alerting ${contact.name} at ${contact.number}`);
+      // In real implementation: SMS/Call APIs would be triggered
+    });
+
+    // Vibrate device if supported
+    if ('vibrate' in navigator) {
+      navigator.vibrate([200, 100, 200, 100, 200]);
+    }
+
+    // Text-to-speech announcement
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance("Emergency alert sent successfully. Help is on the way.");
+      speechSynthesis.speak(utterance);
+    }
+
     toast({
-      title: "🚨 Emergency Alert Sent!",
-      description: "Emergency services and school security have been notified of your location.",
+      title: "🚨 EMERGENCY ALERT SENT!",
+      description: "Emergency services, school security, and emergency contacts have been notified with your exact location.",
       variant: "destructive",
     });
-    
-    // Simulate sending location and emergency details
-    console.log("SOS Alert sent with location:", userLocation);
   };
 
   const callEmergency = (number: string, name: string) => {
+    // Real phone calling functionality
+    const phoneNumber = number.replace(/[^\d]/g, ''); // Remove formatting
+    
     toast({
-      title: `Calling ${name}`,
-      description: `Dialing ${number}...`,
+      title: `📞 Calling ${name}`,
+      description: `Connecting to ${number}...`,
     });
-    // In a real app, this would trigger the phone's calling functionality
-    window.open(`tel:${number}`);
+    
+    // Attempt to open phone dialer
+    try {
+      // For mobile devices - direct call
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        window.location.href = `tel:${phoneNumber}`;
+      } else {
+        // For desktop - show call instructions
+        window.open(`tel:${phoneNumber}`, '_blank');
+      }
+    } catch (error) {
+      // Fallback - copy number to clipboard
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        toast({
+          title: "Phone number copied",
+          description: `${number} copied to clipboard. Use your phone to call.`,
+        });
+      });
+    }
   };
 
   const sendQuickMessage = (type: string) => {
-    toast({
-      title: "Quick Message Sent",
-      description: `Emergency ${type} message sent to school administrators.`,
+    const emergencyMessages = {
+      medical: "MEDICAL EMERGENCY: Student/staff needs immediate medical attention.",
+      fire: "FIRE EMERGENCY: Fire detected, immediate evacuation required.",
+      security: "SECURITY THREAT: Potential security incident, lockdown procedures initiated.",
+      weather: "SEVERE WEATHER: Dangerous weather conditions, shelter procedures activated."
+    };
+
+    const message = emergencyMessages[type as keyof typeof emergencyMessages];
+    const timestamp = new Date().toLocaleString();
+    
+    // Simulate sending to school administration system
+    console.log("EMERGENCY MESSAGE SENT:", {
+      type,
+      message,
+      timestamp,
+      location: userLocation,
+      sender: "Emergency Response System"
     });
+
+    // Visual feedback
+    toast({
+      title: `🚨 ${type.toUpperCase()} ALERT SENT`,
+      description: `Emergency ${type} notification sent to school administrators and security team.`,
+      variant: "destructive",
+    });
+
+    // Audio notification
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(`${type} emergency alert sent to school administration.`);
+      speechSynthesis.speak(utterance);
+    }
   };
 
   return (

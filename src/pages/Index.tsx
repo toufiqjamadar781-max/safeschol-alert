@@ -3,6 +3,7 @@ import { Shield, AlertTriangle, BookOpen, Play, Brain, Users, ChevronRight, Star
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Navbar from "@/components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
 
@@ -108,32 +109,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-subtle">
       {/* Navigation */}
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold text-primary">SafeSchool</span>
-          </div>
-          <div className="hidden md:flex items-center gap-6">
-            <Button variant="ghost" onClick={() => navigate("/features")}>Features</Button>
-            <Button variant="ghost" onClick={() => navigate("/about")}>About</Button>
-            <Button variant="ghost" onClick={() => navigate("/contact")}>Contact</Button>
-            <Button onClick={() => navigate("/login")}>Sign In</Button>
-          </div>
-          <div className="md:hidden">
-            <Button variant="ghost" onClick={() => navigate("/login")}>Menu</Button>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <Badge className="mb-6 text-lg px-4 py-2">
+          <Badge className="mb-6 text-lg px-4 py-2 bg-primary text-primary-foreground">
             🏆 Built for SIH 2025 by Elite Innovators
           </Badge>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 bg-gradient-hero bg-clip-text text-transparent">
             Be Prepared, Stay Safe
           </h1>
           
@@ -145,7 +130,7 @@ const Index = () => {
             <Button 
               onClick={handleExploreFeatures}
               size="lg" 
-              className="px-8 py-4 text-lg"
+              className="px-8 py-4 text-lg bg-primary hover:bg-primary-dark"
             >
               🔴 Explore Features
               <ChevronRight className="ml-2 h-5 w-5" />
@@ -176,13 +161,14 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Hero Image */}
-        <div className="max-w-4xl mx-auto">
-          <img 
-            src="/src/assets/hero-image.jpg" 
-            alt="School emergency preparedness" 
-            className="rounded-lg shadow-2xl w-full"
-          />
+        {/* Hero Visual */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="bg-primary/10 rounded-lg p-8 border border-primary/20">
+            <div className="text-6xl mb-4">🏫🛡️</div>
+            <p className="text-lg text-primary font-semibold">
+              Smart Emergency Response System
+            </p>
+          </div>
         </div>
       </section>
 
